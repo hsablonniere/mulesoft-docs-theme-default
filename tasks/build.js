@@ -17,6 +17,9 @@ const postcssUrl = require('postcss-url')
 const cssnano = require('cssnano')
 const replace = require('gulp-replace')
 
+const concat = require('gulp-concat')
+const uglify = require('gulp-uglify')
+
 const postcssPlugins = [
   postcssImport(),
   postcssVar(),
@@ -42,7 +45,9 @@ module.exports = (src, dest, cacheBuster) => {
     vfs.src('images/**/*.{svg,png}', srcOptions)
       .pipe(imagemin()),
 
-    vfs.src('scripts/**/*.js', srcOptions),
+    vfs.src('scripts/*.js', srcOptions)
+      .pipe(uglify())
+      .pipe(concat('scripts/all-scripts.js')),
 
     vfs.src('fonts/*.{svg,eot,woff,woff2}', srcOptions),
 
