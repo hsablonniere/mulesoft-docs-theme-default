@@ -136,8 +136,8 @@
     // safe space over or below current item
     var margin = 10
 
-    const overTheTop = el.offsetTop - scrollPosition < 0
-    const belowTheBottom = el.offsetTop - scrollPosition + el.offsetHeight > parent.offsetHeight
+    var overTheTop = el.offsetTop - scrollPosition < 0
+    var belowTheBottom = el.offsetTop - scrollPosition + el.offsetHeight > parent.offsetHeight
 
     if (overTheTop) {
       parent.scrollTop = el.offsetTop - margin

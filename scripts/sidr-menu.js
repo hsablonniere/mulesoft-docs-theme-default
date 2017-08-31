@@ -4,18 +4,18 @@
   var sidrToggle = document.querySelector('.sidr-toggle'),
     sidrPanel = document.querySelector('#sidr')
 
-  const toolbar = document.createElement('div')
+  var toolbar = document.createElement('div')
   toolbar.classList.add('sidr-toolbar')
 
-  // const backButton = document.createElement('button')
+  // var backButton = document.createElement('button')
   // backButton.classList.add('sidr-back')
   // toolbar.appendChild(backButton)
 
-  const closeButton = document.createElement('button')
+  var closeButton = document.createElement('button')
   closeButton.classList.add('sidr-close')
   toolbar.appendChild(closeButton)
 
-  const title = document.createElement('div')
+  var title = document.createElement('div')
   title.classList.add('sidr-title')
   toolbar.appendChild(title)
 
@@ -23,7 +23,7 @@
 
   // find(document, '#sidr .menu__link + .menu').forEach(function (menu) {
   //
-  //   const submenuOpen = document.createElement('button')
+  //   var submenuOpen = document.createElement('button')
   //   submenuOpen.classList.add('submenu__open')
   //   menu.parentNode.insertBefore(submenuOpen, menu)
   //
