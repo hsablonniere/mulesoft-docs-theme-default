@@ -1,5 +1,5 @@
-.st-search-input {
-  display: none;
+.st-default-search-input {
+  display: none !important;
 }
 
 .search-open {
